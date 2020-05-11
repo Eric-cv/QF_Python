@@ -1,0 +1,93 @@
+匿名函数：lambda 参数， 参数... : 返回
+
+def func(参数, 参数):
+    函数体
+    return 值
+
+lambda x, y: x+y
+
+max()
+min()
+sorted() ---->key=匿名函数
+
+map(func, list) # 对list每个元素做func的映射
+filter(func, list) ---->lambda x:x%2
+reduce() ---> from functools import reduce  函数必须有两个参数
+
+递归函数：
+自己调用自己
+要有入口和出口
+
+文件操作：
+open(path, mode)
+
+mode ----> r
+s.read()
+s.readline()
+s.readlines()
+s.readable()
+
+# 如果读指定的文件不存在，则会报错
+with open('a1.txt') as stream:
+    pass
+# FileNotFoundError: [Errno 2] No such file or directory: 'a1.txt'
+
+# 如果写指定的文件不存在，则自己创建文件
+with open('a1.txt', 'w') as wstream:
+    wstream.write('hello')
+
+mode ----> w, a
+write()
+writelines(可迭代内容，默认没有换行效果)
+writeable()
+
+
+
+os模块：
+os.path
+
+absolute 绝对的 'E:\Files_plus\Project01\QF_Python\day12\a1.jpg'
+
+
+文件：
+文件操作：
+    open()
+    参数1：path(绝对路径) or filename(相对路径，同一级路径下可以直接用文件名)
+        path:
+            绝对路径：'E:\Files_plus\Project01\QF_Python\day12\a1.jpg'
+            相对路径：相对当前文件的路径，返回上层目录：..\
+    参数2：mode:
+        读：r 文本文件  rb 通用（文本文件、图片、音乐都可以）
+        写：w 文本文件  wb 通用（文本文件、图片、音乐都可以）
+    stream -- open(file, mode)
+    stream.read()
+    stream.write()
+    stream.close()
+
+    with open(file, mode) as stream:
+        pass
+
+    os 模块：
+    os.path常用函数：
+        os.path.dirname(__file__) # 获取指定文件的目录(__file__指本文件)
+        os.path.abspath()  # 获取指定文件的目录(绝对路径)
+        os.path.join()  # 拼接文件路径
+        os.path.split()  # 分割(文件目录，文件名)
+        os.path.splitext() # 分割(文件目录\文件名，文件的扩展名)
+        os.path.getsize()  # 获取文件大小(B)
+        os.path.isabs() # 判断是否绝对路径
+        os.path.isfile() # 判断是否是文件
+        os.path.isdir() # 判断是否是文件夹
+
+
+    os常用函数：
+        os模块下的方法：
+        os.getcwd() # 获取当前目录,不能传参数
+        os.listdir() # 浏览文件夹,可传path
+        os.mkdir() # 创建文件夹,可传path
+        os.rmdir() # 删除空文件夹,可传path
+        os.remove() # 删除文件,可传path
+        os.chdir() # 切换目录,可传path
+
+
+

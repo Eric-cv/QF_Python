@@ -1,0 +1,42 @@
+回顾：
+面向对象的特点：
+封装，继承，多态
+封装：
+私有化属性，定义共有的set和get方法
+class Student:
+    def __init__(self, age):
+        self.__age = age
+
+    @property
+    def age(self):
+        return self.__age
+    @age.setter
+    def age(self.age):
+        self.__age = age
+
+s = Student()
+s.age = 10
+
+继承：
+is a:
+    父类  子类
+    class Student(Person):
+        pass
+has a:
+    class Student:
+        def __init__(self, book, computer):
+            book 是自定义类型  -------  系统类型
+
+多继承：
+class C(A, B):
+    pass
+
+C.__mro__
+
+多态：传参数的时候用一个父类的名字pet，传的时候可以传他的子类，内部可以对子类进行判断
+class Person:
+    def feed_pet(self, pet):
+        if isinstance(pet, Pet):
+            pass
+
+

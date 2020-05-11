@@ -1,0 +1,66 @@
+集合：
+ list[] tuple() ----> set{}
+ 无序不重复的序列，集合
+ 无序----> 跟下标相关
+
+ s = {1,2,3,4,5} ---> s[1]
+
+for i in s:
+    print(i)
+
+ 内置函数：
+ 添加： add update
+ 删除：remove discard pop clear
+
+ 运算相关函数：
+ - difference()
+ | union()
+ & intersection()
+ ^ symmetric_difference
+
+可变和不可变：
+可变：地址不变里面的内容改变  list dict set
+不可变：只要内容改变，必须改变地址  int str float tuple
+
+list1 = [1, 3, 5, 8, 9, 0]
+list2 = list1
+list1.remove(5)
+print(list2 )
+
+s = 'abc'
+s1 = s
+s = 'abcd'
+print(s1)
+
+
+类型转换：
+str ---> list set ... 相互的转换
+
+list ---> set tuple dict
+
+函数：
+增加代码的复用性：减少了代码的冗余
+
+def 函数名([参数,参数...]):
+    函数体（重复性代码）
+
+没有参数：
+
+def add():
+    result = 1+3
+    print(result)
+
+调用：
+add()  --->  4
+
+有参数：
+
+def add(a, b):
+    result = a + b
+    print(result)
+
+调用：
+add(1, 3)
+add(2, 6)
+
+
